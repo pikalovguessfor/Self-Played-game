@@ -3,14 +3,17 @@
 using namespace std;
 
 struct DataActors {
-	//This Struct contains a some data about a actors. Money, Producing ETC...
+	/*This Struct contains a some data about a actors. Money, Producing ETC...
+	* Struct contains any characteristicks and methods to edit a name.
+	* 
+	*/
 
 
 	long long _Money = 0;
 	long long _Producing = 0;
 	long long _Income = 0;
 
-	//Name constructor
+	/* Name constructor */
 	int FPnameNum = 0;
 	int SPnameNum = 0;
 
@@ -95,7 +98,7 @@ struct DataActors {
 		}
 
 	}
-	//\\
+	/**/
 
 	DataActors(long long money, long long producing, long long income) {
 
@@ -113,12 +116,25 @@ int main() {
 
 	srand(time(0));
 
-	DataActors FabricF(rand() % 5, rand() % 5, rand() % 5);
-	DataActors FabricS(rand() % 5, rand() % 5, rand() % 5);
-	DataActors FabricT(rand() % 5, rand() % 5, rand() % 5);
-	DataActors FabricF(rand() % 5, rand() % 5, rand() % 5);
+	DataActors FabricFirst(rand() % 5, rand() % 5, rand() % 5);
+	DataActors FabricSecond(rand() % 5, rand() % 5, rand() % 5);
+	DataActors FabricThird(rand() % 5, rand() % 5, rand() % 5);
+	DataActors FabricFour(rand() % 5, rand() % 5, rand() % 5);
+
+	bool GameStart = true;
+
+	while (GameStart) {
+		/* Game Body.Its loop for main game and uses to Create, and edit a Main actor class characteristics
+		* 
+		*/
+		
+		short ivories = rand() % 21;
 
 
+
+
+
+	}
 
 	return 0;
 }
