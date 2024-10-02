@@ -135,12 +135,18 @@ int main() {
 
 	bool GameStart = true;
 
+	long long Turn = 0;
+
 	short ArrNumbersIvory[4];
 
 	while (GameStart) {
 		/* Game Body.Its loop for main game and uses to Create, and edit a Main actor class characteristics
 		* 
 		*/
+
+		Turn++;
+
+		cout << "Turn - " << Turn << endl << endl;
 
 		short IvoryFirst = rand() % 21;
 		short IvorySecond = rand() % 21;
@@ -161,9 +167,16 @@ int main() {
 
 		}
 
-		cout << endl << IvoryFirst << endl << IvorySecond << endl << IvoryThird << endl << IvoryFourth << endl;
+		//cout << endl << IvoryFirst << endl << IvorySecond << endl << IvoryThird << endl << IvoryFourth << endl;
 
+		FabricFirst._Income = IncomePerTurnHandler(FabricFirst._Income, IvoryFirst);
+		FabricFirst._Money = IncomePlusToMoney(FabricFirst._Money, FabricFirst._Income);
 
+		cout << endl << FabricFirst._Income << endl;
+		cout << endl << FabricFirst._Money << endl;
+
+		Sleep(1000);
+		system("cls");
 	}
 
 	return 0;
